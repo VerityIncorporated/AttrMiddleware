@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Verity.AttrMiddleware</PackageId>
+        <Title>AttrMiddleware</Title>
+        <Version>1.0.0</Version>
+        <Authors>Verity</Authors>
+        <Description>AttrMiddleware is a C# library that allows for the application of middleware to specific routes or controller methods using attribute-based configuration, enhancing modularity and readability in ASP.NET Core applications.</Description>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RepositoryUrl>https://github.com/VerityIncorporated/AttrMiddleware</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/VerityIncorporated/AttrMiddleware</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>AttrMiddleware;Middleware;ASPCore;ASPNet;ASP.Net;</PackageTags>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\AttrMiddleware.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\AttrMiddleware.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="bin\$(Configuration)\AttrMiddleware.xml" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+</Project>
