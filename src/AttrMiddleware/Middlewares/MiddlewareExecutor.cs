@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AttrMiddleware.Attributes;
+﻿using AttrMiddleware.Attributes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 
@@ -22,8 +19,8 @@ public class MiddlewareExecutor(RequestDelegate next)
         var endpoint = context.Features.Get<IEndpointFeature>()?.Endpoint;
         var middlewareAttributes = endpoint?.Metadata.GetOrderedMetadata<MiddlewareAttribute>();
         var ignoreMiddlewareAttributes = endpoint?.Metadata.GetOrderedMetadata<IgnoreMiddlewareAttribute>();
-
-        if (middlewareAttributes == null || middlewareAttributes.Any())
+        
+        if (middlewareAttributes == null || !middlewareAttributes.Any())
         {
             await next(context);
             return;
