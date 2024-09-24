@@ -1,0 +1,10 @@
+src/.idea/
+
+src/AttrMiddleware/bin/
+src/AttrMiddleware/obj/
+
+src/AttrMiddleware/**/*.user
+src/AttrMiddleware/**/*.suo
+src/AttrMiddleware/**/*.userosscache
+src/AttrMiddleware/**/*.sln.docstates
+src/AttrMiddleware/Properties/launchSettings.json

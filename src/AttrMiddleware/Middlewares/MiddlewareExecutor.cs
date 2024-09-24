@@ -37,7 +37,7 @@ public class MiddlewareExecutor(RequestDelegate next)
             {
                 continue;
             }
-
+            
             middlewares.Add(instance);
         }
         
