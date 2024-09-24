@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <PackageId>Verity.AttrMiddleware</PackageId>
         <Title>AttrMiddleware</Title>
-        <Version>1.0.2</Version>
+        <Version>1.0.3</Version>
         <Authors>Verity</Authors>
         <Description>AttrMiddleware is a C# library that allows for the application of middleware to specific routes or controller methods using attribute-based configuration, enhancing modularity and readability in ASP.NET Core applications.</Description>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
